@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pricing | neuroPATH Brain Training</title>
+<meta name="description" content="Neurofeedback session and package pricing at neuroPATH Brain Training.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Montserrat:wght@400;500;600&family=Unica+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="neuroPATH Brain Training, home"><span class="mark"><span class="neuro">neuro</span><span class="path">PATH</span></span><span class="sub">Brain Training</span></a>
+    <nav aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="pricing.html" aria-current="page">Pricing</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero-band"><div class="wrap hero" style="padding-bottom:3rem">
+    <h1>Simple, clear pricing</h1>
+    <p class="lead">Start with a consultation, then choose single sessions or a package.</p>
+  </div></div>
+
+  <section>
+    <div class="wrap">
+      <ul class="prices">
+        <li>
+          <h3>Consultation</h3><span class="amt">$[XX]</span>
+          <p>About 45 minutes. We talk through your goals and explain what a session is like.</p>
+        </li>
+        <li>
+          <h3>Single session</h3><span class="amt">$[XX]</span>
+          <p>About 20 minutes of neurofeedback training. Good for trying it out.</p>
+        </li>
+        <li>
+          <h3>Package of 10 sessions</h3><span class="amt">$[XXX]</span>
+          <p>Pay for 10 sessions up front. <span class="save">Save $[XX] compared with single sessions.</span></p>
+        </li>
+        <li>
+          <h3>Package of 20 sessions</h3><span class="amt">$[XXX]</span>
+          <p>Best value for ongoing training. <span class="save">Save $[XX] compared with single sessions.</span></p>
+        </li>
+      </ul>
+      <p class="note" style="margin-top:1.5rem">Payment is due at the time of service. Please give 24 hours notice for canceling or rescheduling.</p>
+      <p style="margin-top:2rem"><a class="btn" href="index.html#contact">Book a consultation</a></p>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p>&copy; <span id="yr">2026</span> neuroPATH Brain Training. Neurofeedback services here are for wellness and performance training. They are not a diagnosis, medical treatment, or substitute for care from a licensed healthcare provider.</p>
+  </div>
+</footer>
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+// Stretch "Brain Training" so it spans the full width of the neuroPATH wordmark
+function fitTagline(){
+  var m=document.querySelector('.brand .mark'),s=document.querySelector('.brand .sub');
+  if(!m||!s)return;
+  s.style.letterSpacing='0';s.style.marginRight='0';
+  var gap=m.getBoundingClientRect().width-s.getBoundingClientRect().width;
+  var ls=Math.max(0,gap/(s.textContent.length-1));
+  s.style.letterSpacing=ls+'px';s.style.marginRight=(-ls)+'px';
+}
+fitTagline();
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fitTagline);
+window.addEventListener('load',fitTagline);
+</script>
+</body>
+</html>

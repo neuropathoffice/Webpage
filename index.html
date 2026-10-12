@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>neuroPATH Brain Training | Neurofeedback Wellness</title>
+<meta name="description" content="Neurofeedback wellness sessions that help you train focus, calm, and balance. Book a free consultation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Montserrat:wght@400;500;600&family=Unica+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="neuroPATH Brain Training, home"><span class="mark"><span class="neuro">neuro</span><span class="path">PATH</span></span><span class="sub">BRAIN TRAINING</span></a>
+    <nav aria-label="Main">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero-band"><div class="wrap hero">
+    <h1>Train your brain toward calm and focus.</h1>
+    <p class="lead">Neurofeedback is a gentle, non-invasive way to practice healthier brainwave patterns, with real-time feedback you can see and hear.</p>
+    <p><a class="btn" href="#contact">Book a consultation</a><a class="btn ghost" href="pricing.html">See pricing</a></p>
+    <svg class="wave" viewBox="0 0 1000 140" role="img" aria-label="Illustration of brainwave signals settling into a steady rhythm" preserveAspectRatio="none">
+      <path class="w1" d="M0 70 C40 20 60 120 100 60 S160 10 200 75 S250 125 290 55 S350 25 390 80 S440 110 480 60 S540 40 580 75 S640 95 680 62 S740 50 780 72 S840 88 880 68 S940 62 1000 70"/>
+      <path class="w2" d="M0 90 C50 60 70 125 120 85 S190 50 240 95 S300 120 350 80 S420 55 470 90 S540 105 600 82 S680 70 740 88 S820 96 880 84 S950 80 1000 86"/>
+    </svg>
+  </div></div>
+
+  <section id="about">
+    <div class="wrap">
+      <h2>What we do</h2>
+      <p>At neuroPATH Brain Training, we offer neurofeedback sessions for people who want to build better habits of focus, relaxation, and rest. During a session, sensors on the scalp read your brain's electrical activity while you watch a video or listen to music. The picture and sound respond to your brainwaves, helping your brain learn from the feedback over time.</p>
+      <div class="cols">
+        <div><h3>Comfortable</h3><p>Sessions are quiet and relaxed. There are no needles, no electrical stimulation, and nothing to take.</p></div>
+        <div><h3>Personalized</h3><p>We start with a conversation about your goals and tailor each session plan to you.</p></div>
+        <div><h3>Practical</h3><p>Most sessions last about 30 to 45 minutes. Many people come once or twice a week for several weeks.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="how">
+    <div class="wrap">
+      <h2>How it works</h2>
+      <ol class="steps">
+        <li><strong>Consultation</strong>We talk through what you'd like to work on and answer your questions.</li>
+        <li><strong>Sessions</strong>You relax while the system gives you live feedback on your brainwave activity.</li>
+        <li><strong>Review</strong>We check in regularly on how you feel and adjust the plan as you go.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <h2>Get in touch</h2>
+      <p>Tell us what you're hoping to improve and we'll help you plan a first visit.</p>
+      <dl>
+        <dt>Phone</dt><dd><a href="tel:+13177857850">(317) 785-7850</a></dd>
+        <dt>Email</dt><dd><a href="mailto:office@neuropath.cc">office@neuropath.cc </a></dd>
+        <dt>Address</dt><dd>1811 S. 10th St., Noblesville, IN 46060</dd>
+        <dt>Hours</dt><dd>[Days and hours, by appointment]</dd>
+      </dl>
+      <a class="btn" href="mailto:office@neuropath.cc?subject=Consultation%20request">Email us</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p>&copy; <span id="yr">2026</span> neuroPATH Brain Training. Neurofeedback services here are for wellness and performance training. They are not a diagnosis, medical treatment, or substitute for care from a licensed healthcare provider.</p>
+  </div>
+</footer>
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+// Stretch "Brain Training" so it spans the full width of the neuroPATH wordmark
+function fitTagline(){
+  var m=document.querySelector('.brand .mark'),s=document.querySelector('.brand .sub');
+  if(!m||!s)return;
+  s.style.letterSpacing='0';s.style.marginRight='0';
+  var gap=m.getBoundingClientRect().width-s.getBoundingClientRect().width;
+  var ls=Math.max(0,gap/(s.textContent.length-1));
+  s.style.letterSpacing=ls+'px';s.style.marginRight=(-ls)+'px';
+}
+fitTagline();
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fitTagline);
+window.addEventListener('load',fitTagline);
+</script>
+</body>
+</html>

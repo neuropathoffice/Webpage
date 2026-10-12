@@ -1,0 +1,76 @@
+/* neuroPATH Brain Training — brand colors from CMYK sheet, shown here in lighter tints */
+:root{
+  --teal:#058AAB;        /* brand bright teal */
+  --teal-deep:#006882;   /* brand dark teal */
+  --green:#527561;       /* brand green */
+  --gray:#B8B8B8;        /* brand gray */
+  --paper:#FAFDFE;       /* page background: near-white teal tint */
+  --mist:#E8F5F8;        /* light teal tint for bands */
+  --mist-2:#D3EBF1;      /* slightly deeper tint for borders/lines */
+  --ink:#24444D;         /* body text, softened teal-gray */
+  --ink-soft:#4F6B73;
+  --sans:"Montserrat",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --heavy:"Inter","Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:1.0625rem;line-height:1.7}
+a{color:var(--teal-deep)}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:4px}
+.wrap{max-width:68rem;margin:0 auto;padding:0 1.5rem}
+
+header.site{background:var(--paper);border-bottom:1px solid var(--mist-2)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-top:1rem;padding-bottom:1rem;flex-wrap:wrap}
+.brand{text-decoration:none;display:inline-flex;flex-direction:column;line-height:1}
+.brand .mark{font-size:2rem;color:var(--teal-deep)}
+.brand .neuro{font-family:"Unica One","Arial Narrow",Impact,sans-serif;font-weight:400;letter-spacing:.04em}
+.brand .path{font-family:var(--heavy);font-weight:900;letter-spacing:-.01em;color:var(--teal)}
+.brand .sub{display:block;align-self:flex-start;white-space:nowrap;font-family:var(--sans);font-size:.8rem;font-weight:500;letter-spacing:.14em;color:var(--green);margin-top:.1rem}
+nav a{margin-left:1.5rem;color:var(--ink-soft);text-decoration:none;font-weight:500}
+nav a:hover,nav a[aria-current]{color:var(--teal-deep);text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:2px}
+
+h1,h2{font-family:var(--heavy);font-weight:900;line-height:1.1;margin:0 0 .5em;color:var(--teal-deep);letter-spacing:-.02em}
+h3{font-family:var(--sans);font-weight:600;line-height:1.25;margin:0 0 .5em;color:var(--teal)}
+h1{font-size:clamp(2.2rem,6vw,3.7rem);max-width:18ch}
+h2{font-size:clamp(1.7rem,3.5vw,2.3rem)}
+h3{font-size:1.2rem}
+p{margin:0 0 1em;max-width:62ch}
+
+.hero-band{background:var(--mist)}
+.hero{padding:4.5rem 0 1.5rem}
+.hero p.lead{font-size:1.2rem;color:var(--ink-soft);max-width:50ch}
+.wave{display:block;width:100%;height:auto;margin-top:2.5rem}
+.wave path{fill:none;stroke-linecap:round;stroke-linejoin:round}
+.wave .w1{stroke:var(--teal);stroke-width:3;stroke-dasharray:2400;stroke-dashoffset:2400;animation:draw 3.2s ease-out forwards}
+.wave .w2{stroke:var(--green);stroke-width:2;opacity:.65;stroke-dasharray:2400;stroke-dashoffset:2400;animation:draw 3.8s .3s ease-out forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.wave .w1,.wave .w2{animation:none;stroke-dashoffset:0}html{scroll-behavior:auto}}
+
+.btn{display:inline-block;background:var(--teal-deep);color:#fff;padding:.8rem 1.6rem;border-radius:999px;text-decoration:none;font-weight:600;margin:0 .75rem .5rem 0}
+.btn:hover{background:var(--teal)}
+.btn.ghost{background:transparent;color:var(--teal-deep);border:2px solid var(--teal)}
+.btn.ghost:hover{background:#fff;color:var(--teal-deep)}
+
+section{padding:3.5rem 0}
+.band{background:var(--mist)}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:2.5rem;margin-top:2rem}
+.cols p{color:var(--ink-soft)}
+.steps{list-style:none;padding:0;margin:0;max-width:44rem;border-left:3px solid var(--mist-2)}
+.steps li{padding:0 0 1.5rem 1.5rem;position:relative}
+.steps li::before{content:"";position:absolute;left:-.55rem;top:.55rem;width:.8rem;height:.8rem;border-radius:50%;background:var(--teal)}
+.steps strong{display:block;color:var(--teal-deep)}
+.contact dl{display:grid;grid-template-columns:7rem 1fr;gap:.6rem 1rem;margin:0 0 1.5rem}
+.contact dt{font-weight:600;color:var(--green)}
+.contact dd{margin:0}
+
+.prices{margin:0;padding:0;list-style:none;max-width:46rem}
+.prices li{display:grid;grid-template-columns:1fr auto;gap:.25rem 1.5rem;padding:1.5rem 0;border-bottom:1px solid var(--mist-2)}
+.prices li:first-child{border-top:1px solid var(--mist-2)}
+.prices h3{margin:0}
+.prices .amt{font-family:var(--heavy);font-weight:900;font-size:1.6rem;color:var(--teal-deep);white-space:nowrap}
+.prices p{grid-column:1/-1;margin:0;color:var(--ink-soft)}
+.prices .save{color:var(--green);font-weight:600}
+.note{font-size:.95rem;color:var(--ink-soft)}
+
+footer.site{background:var(--mist);padding:2rem 0;font-size:.9rem;color:var(--ink-soft)}
+footer.site p{max-width:70ch;margin:0}
